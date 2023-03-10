@@ -1,9 +1,4 @@
 <script setup>
- import { ref } from 'vue'
-
-const contador = ref(0)
-
-
     const nome = 'Evelyn'
     const idade = 16
 
