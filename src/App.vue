@@ -1,40 +1,36 @@
 <script setup>
-  import{ ref } from 'vue' 
-    const nome = 'Evelyn'
-    const idade = 16
-    const contador = ref(0)
-
-    function inverter(texto) {
-        return texto.split('').reverse().join('')
-
-    }
-
-    function saudacao() {
-        return `Olá, ${nome}!`
-    }
+import{ ref } from 'vue' 
+  const nome = 'Evelyn'
+  const idade = 16
+  const contador = ref(0)
+  function inverter(texto) {
+      return texto.split('').reverse().join('')
+  }
+  function saudacao() {
+      return `Olá, ${nome}!`
+  }
 </script>
 
 <template>
-    <div class="info">
-        <h1>Exemplo 1 - Mostrando informações na tela</h1>
-        <p>Nome: {{ nome }} </p>
-        <p>Idade: {{ idade }}  anos</p>
-        <hr />
-        <p>Para completar 50 anos faltam: {{ 50 - idade }}  anos</p>
-        <p>O nome tem {{ nome.length }}  caracteres</p>
-        <p>O nome invertido é: {{ inverter(nome) }} </p>
-        <p>O nome invertido é: {{ (inverter(nome)).toUpperCase()}} </p>
-        <hr />
-        <p> Exemplo de saudação usando função</p>
-        <p> {{ saudacao() }}  </p>
-    </div>
-    <div class="info">
+  <div class="info">
+      <h1>Exemplo 1 - Mostrando informações na tela</h1>
+      <p>Nome: {{ nome }} </p>
+      <p>Idade: {{ idade }}  anos</p>
+      <hr />
+      <p>Para completar 50 anos faltam: {{ 50 - idade }}  anos</p>
+      <p>O nome tem {{ nome.length }}  caracteres</p>
+      <p>O nome invertido é: {{ inverter(nome) }} </p>
+      <p>O nome invertido é: {{ (inverter(nome)).toUpperCase()}} </p>
+      <hr />
+      <p> Exemplo de saudação usando função</p>
+      <p> {{ saudacao() }}  </p>
+  </div>    <div class="info">
       contador:{{ contador }}
       <button @click="contador++">+</button>
       <button @click="contador--">-</button>
-      <div v-if="contador> 10" class="verde">E maior que 10</div>
-    <div v-else-if="contador <10" class="vermelho">é menor que 10</div>
-    <div v-else class="amarelo">E 10 </div>
+      <div v-if="contador> 10" class="verde">É maior que 10</div>
+    <div v-else-if="contador <10" class="vermelho">É menor que 10</div>
+    <div v-else class="amarelo">É 10 </div>
     </div>
     
 
@@ -48,7 +44,6 @@
   border-radius: 10px;
   margin: 0 20px;
 }
-
 h1 {
   color: white;
   font-weight: bold;
@@ -63,5 +58,4 @@ h1 {
 .amarelo{
     color: yellow;
 }
-
 </style>
